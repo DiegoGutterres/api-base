@@ -11,6 +11,7 @@ const dotenv = require('dotenv').config();
 
 //diz pro app usar a utilização do crudrouter
 app.use(crudRouter);
+app.use(express.json())
 
 // Setar a porta do servidor, a partir do arquivo .env
 app.set('port', process.env.PORT);

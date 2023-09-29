@@ -8,16 +8,22 @@ router.get('/api', (request, response) => (
     console.log("get")
 ));
 
-router.post('/api', (request, responde) =>(
-    responde.send('Metodo utilizado para salvar informações')
+router.post('/api', (request, response) =>(
+    response.send('Metodo utilizado para salvar informações'),
+    console.log("post"),
+    console.log(request.body)
+
 ));
 
-router.put('/api/:id', (request, responde) =>(
-    responde.send('Metodo utilizado para editar informações')
+router.put('/api/:id', (request, response) =>(
+    response.send('Metodo utilizado para editar informações'),
+    console.log("put"),
+    console.log('id: ', request.params.id)
 ));
 
-router.delete('/api/:id', (request, responde) =>(
-    responde.send('Metodo utilizado para deletar informações')
+router.delete('/api/:id', (request, response) =>(
+    response.send('Metodo utilizado para deletar informações'),
+    console.log('delete')
 ));
 
 module.exports = router;
