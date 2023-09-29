@@ -4,10 +4,13 @@ const express = require('express');
 const app = express();
 
 //Importar as rotas para serem executadas na aplicação
-const router = require('./router/crudRouter');
+const crudRouter = require('./routes/crudRouter.js');
 
 // Importar pacote dotenv
 const dotenv = require('dotenv').config();
+
+//diz pro app usar a utilização do crudrouter
+app.use(crudRouter);
 
 // Setar a porta do servidor, a partir do arquivo .env
 app.set('port', process.env.PORT);

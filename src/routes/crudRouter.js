@@ -4,7 +4,8 @@ const express = require('express');
 const router = express.Router();
 
 router.get('/api', (request, response) => (
-    response.send('Retorno de lista de informações do bando de dados')
+    response.send('Retorno de lista de informações do bando de dados'),
+    console.log("get")
 ));
 
 router.post('/api', (request, responde) =>(
