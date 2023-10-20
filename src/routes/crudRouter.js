@@ -1,27 +1,21 @@
 // Importar pacote do express
-const express = require('express');
+const { Router } = require('express');
 // Instanciar o Router na na variavel router
-const router = express.Router();
-const { listarDados } = require('../controllers/controller')
+const router = Router();
+const { 
+    listarDados, 
+    gravarDados,
+    atualizarDados,
+    deletarDados
+} = require('../controllers/controller');
 
-router.get('/api', (listarDados));
 
-router.post('/api', (request, response) =>(
-    response.send('Metodo utilizado para salvar informações'),
-    console.log("post"),
-    console.log(request.body)
+router.get('/listar', listarDados);
 
-));
+router.post('/gravar', gravarDados);
 
-router.put('/api/:id', (request, response) =>(
-    response.send('Metodo utilizado para editar informações'),
-    console.log("put"),
-    console.log('id: ', request.params.id)
-));
+router.put('/atualizar/:id', atualizarDados);
 
-router.delete('/api/:id', (request, response) =>(
-    response.send('Metodo utilizado para deletar informações'),
-    console.log('delete')
-));
+router.delete('/deletar/:id', deletarDados);
 
 module.exports = router;
