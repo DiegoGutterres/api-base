@@ -2,11 +2,9 @@
 const express = require('express');
 // Instanciar o Router na na variavel router
 const router = express.Router();
+const { listarDados } = require('../controllers/controller')
 
-router.get('/api', (request, response) => (
-    response.send('Retorno de lista de informações do bando de dados'),
-    console.log("get")
-));
+router.get('/api', (listarDados));
 
 router.post('/api', (request, response) =>(
     response.send('Metodo utilizado para salvar informações'),

@@ -13,6 +13,7 @@ const dotenv = require('dotenv').config();
 app.use(crudRouter);
 app.use(express.json())
 
+
 // Setar a porta do servidor, a partir do arquivo .env
 app.set('port', process.env.PORT);
 
