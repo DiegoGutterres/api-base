@@ -26,7 +26,7 @@ touch .env
 ```
 Intalar pacotes da API.
 ```
-npm i express nodemon dotenv
+npm i express nodemon dotenv mysql2
 ```
 * express: será o servidor da API.
 * nodemon: atualizar os arquivos alterados sem parar o 
@@ -87,3 +87,5 @@ touch .env
 touch .env.example
 ```
 <hr>
+
+
