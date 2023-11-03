@@ -2,6 +2,7 @@
 const { Router } = require('express');
 // Instanciar o Router na na variavel router
 const router = Router();
+
 const { 
     listarDados, 
     gravarDados,
